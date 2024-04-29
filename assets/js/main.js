@@ -274,7 +274,7 @@ const mspan=document.getElementById('mspan');
 
 const form=document.getElementById('form');
 
-
+var validRegex =/^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
 form.addEventListener('submit',(e)=>{
 if(name.value===''||name.value==null||name.value>=0||name.value<=0){
 e.preventDefault();
@@ -283,7 +283,7 @@ namespan1.innerHTML="name is required";
 
 
 
-if(email.value===''){
+if(!email.value.match(validRegex)){
   e.preventDefault();
   espan.innerHTML="email is required";
   }

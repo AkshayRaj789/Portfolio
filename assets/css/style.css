@@ -244,6 +244,23 @@ h6 {
   background: url("../img/hero-bg-crop.jpg") top center;
   background-size: cover;
 }
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("/assets/img/small.JPG") top center;
+  background-size: cover;
+}
+#hero .hero-container {
+  position: relative;
+  z-index: 2;
+  min-width: 300px;
+  margin-top: 550px;
+  
+}
+}
+
 
 #hero:before {
   content: "";
